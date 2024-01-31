@@ -15,7 +15,7 @@ public class TestOmdbApi extends ReusableMethods {
     //2. Assert that the result should contain at least 30 items
         String totalnum= JsonPath.read(response, "$.totalResults");
         System.out.println( totalnum);
-        int totalResults=Integer.valueOf(totalnum);
+        int totalResults=Integer.parseInt(totalnum);
         assertTrue(totalResults>30);
 
 
